@@ -1,0 +1,49 @@
+{
+  "rows": 120000,
+  "fraud_rows": 881,
+  "fraud_prevalence": 0.0073416666666666665,
+  "fraud_value": 1658753.6499999992,
+  "senders": 5000,
+  "receivers": 5000,
+  "eda_scope": "Distribution analysis uses days 0 through 26 only",
+  "training_amounts": [
+    {
+      "is_fraud": 0,
+      "rows": 71402,
+      "minimum": 2.52,
+      "median": 450.9,
+      "p95": 2503.567499999999,
+      "maximum": 84367.7,
+      "mean": 774.9234252541999
+    },
+    {
+      "is_fraud": 1,
+      "rows": 358,
+      "minimum": 108.1,
+      "median": 810.565,
+      "p95": 3245.5144999999984,
+      "maximum": 17674.98,
+      "mean": 1306.4396089385466
+    }
+  ],
+  "training_channels": [
+    {
+      "channel": "BANK",
+      "rows": 7175,
+      "fraud_prevalence": 0.004878048780487805,
+      "volume": 5535267.200000002
+    },
+    {
+      "channel": "P2P",
+      "rows": 50376,
+      "fraud_prevalence": 0.004843576306177545,
+      "volume": 39027205.89000037
+    },
+    {
+      "channel": "QR",
+      "rows": 14209,
+      "fraud_prevalence": 0.005559856429023858,
+      "volume": 11236314.700000089
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "rows": 120000,
+  "features": 115,
+  "nonconstant_features": 115,
+  "reference_rows_checked": 55,
+  "historical_features_per_reference_row": 110,
+  "models_reloaded_and_metrics_reproduced": [
+    "transaction_only_logistic",
+    "transaction_only_xgboost",
+    "network_context_logistic",
+    "network_context_xgboost"
+  ],
+  "strictly_separated_time_splits": true
+}

@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "seed": 42,
+  "input_source": "simulated",
+  "packages": {
+    "duckdb": "1.5.5",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0"
+  },
+  "input_sha256": "251da2c185651cb7d22258e9af98e0cc7db02e31894d6727d1cacc3adcd4892b",
+  "seconds": 99.76,
+  "source_sha256": {
+    "run.py": "0302e153122a159bd4d431262564e86ac7902b4e5726d1eb24f9af9928e5b82c",
+    "scripts\\eda.py": "13f595068fc08fce6520a03743f782af051a63ea790fde093ebac74b41498ef2",
+    "scripts\\features.py": "c1a99cf686ce6113e0fea0dbd8200ce446254cd2823b9a39acbe59bbce562957",
+    "scripts\\generate.py": "13c3cd9b8ffc74c9be1c581e7c434cff70f45dfd7f83248d0cc2fa0b67be1f2d",
+    "scripts\\load.py": "1c7af937e553de677da85549f4856702938f18288c857759caba1c08681aa87e",
+    "scripts\\train.py": "a605f010bd4b826e4586de5242b0a4c89323e8e346d5bf233beeae1c01d893c0",
+    "scripts\\verify.py": "dbd774edf74fcf96a1ba02524a45c3283376e642feff294e0d46ca4aaa2842f2",
+    "scripts\\visualize.py": "97e779a4b3f10b2b71a915c48e90e99f19f01c48bb5bbc9cd1a7f2dda6b93a18",
+    "tests\\test_pipeline.py": "2411bcc8b43e415e3e851b1c7a260edd965f5c49ea4cc83decd222931d875ee6"
+  },
+  "python": "3.12.10",
+  "visualization_script_sha256": "1de735fb531a6838239c9c1a42a5b2e1aff8b3f091f5c7cd51a27608548ea4e2",
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 7.2
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/generate.py",
+        "--rows",
+        "120000",
+        "--seed",
+        "42",
+        "--output",
+        "<project>/data/transactions.csv"
+      ],
+      "exit_code": 0,
+      "seconds": 1.41
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/load.py",
+        "--csv",
+        "<project>/data/transactions.csv",
+        "--db",
+        "<project>/data/wallet.duckdb"
+      ],
+      "exit_code": 0,
+      "seconds": 1.43
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/eda.py",
+        "--db",
+        "<project>/data/wallet.duckdb",
+        "--out",
+        "<project>/outputs",
+        "--train-end-day",
+        "27"
+      ],
+      "exit_code": 0,
+      "seconds": 2.33
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/features.py",
+        "--db",
+        "<project>/data/wallet.duckdb",
+        "--out",
+        "<project>/outputs"
+      ],
+      "exit_code": 0,
+      "seconds": 15.1
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/train.py",
+        "--db",
+        "<project>/data/wallet.duckdb",
+        "--out",
+        "<project>/outputs",
+        "--train-end-day",
+        "27",
+        "--test-start-day",
+        "36",
+        "--seed",
+        "42"
+      ],
+      "exit_code": 0,
+      "seconds": 55.51
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/verify.py",
+        "--db",
+        "<project>/data/wallet.duckdb",
+        "--out",
+        "<project>/outputs"
+      ],
+      "exit_code": 0,
+      "seconds": 16.77
+    }
+  ],
+  "chart_sources_sha256": {
+    "metrics.json": "7cbc5536eb273a4302a17bcd9a02d1c0601b26fa13ad617f3476b584c63200cb",
+    "scored_holdout.csv": "371a79b5057cb06de6dffd2ce57549d6ad0acdf947dc75d9cb84e840527a0f90",
+    "eda_daily_training.csv": "5e770cc3c94e730b012a560a5728208b9c082cfcd7772066244b214283b3e790"
+  }
+}

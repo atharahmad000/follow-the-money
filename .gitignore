@@ -1,0 +1,12 @@
+﻿.venv/
+.venv-clean/
+__pycache__/
+data/
+outputs/
+clean_run/
+clean_final/
+polished_run/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.duckdb.wal

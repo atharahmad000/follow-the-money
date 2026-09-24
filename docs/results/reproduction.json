@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "verified_date": "2026-09-24",
+  "input_sha256": "251da2c185651cb7d22258e9af98e0cc7db02e31894d6727d1cacc3adcd4892b",
+  "source_sha256": {
+    "run.py": "0302e153122a159bd4d431262564e86ac7902b4e5726d1eb24f9af9928e5b82c",
+    "scripts\\eda.py": "13f595068fc08fce6520a03743f782af051a63ea790fde093ebac74b41498ef2",
+    "scripts\\features.py": "c1a99cf686ce6113e0fea0dbd8200ce446254cd2823b9a39acbe59bbce562957",
+    "scripts\\generate.py": "13c3cd9b8ffc74c9be1c581e7c434cff70f45dfd7f83248d0cc2fa0b67be1f2d",
+    "scripts\\load.py": "1c7af937e553de677da85549f4856702938f18288c857759caba1c08681aa87e",
+    "scripts\\train.py": "a605f010bd4b826e4586de5242b0a4c89323e8e346d5bf233beeae1c01d893c0",
+    "scripts\\verify.py": "dbd774edf74fcf96a1ba02524a45c3283376e642feff294e0d46ca4aaa2842f2",
+    "scripts\\visualize.py": "97e779a4b3f10b2b71a915c48e90e99f19f01c48bb5bbc9cd1a7f2dda6b93a18",
+    "tests\\test_pipeline.py": "2411bcc8b43e415e3e851b1c7a260edd965f5c49ea4cc83decd222931d875ee6"
+  },
+  "identical_metrics": true,
+  "identical_holdout_scores": true,
+  "identical_alert_tables": true,
+  "consistent_alert_schema": true,
+  "identical_package_versions": true,
+  "primary_seconds": 99.76,
+  "separate_environment_seconds": 99.25,
+  "primary_command": "python run.py --rows 120000 --seed 42",
+  "second_command": "python run.py --rows 120000 --seed 42 --data-dir polished_run/data --out polished_run/outputs"
+}

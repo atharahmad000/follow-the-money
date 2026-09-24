@@ -1,0 +1,577 @@
+[
+  {
+    "name": "amount",
+    "description": "Current requested amount",
+    "availability": "At request time"
+  },
+  {
+    "name": "hour_of_day",
+    "description": "Fractional hour in simulated day",
+    "availability": "At request time"
+  },
+  {
+    "name": "weekday",
+    "description": "Simulated weekday; day zero is Monday",
+    "availability": "At request time"
+  },
+  {
+    "name": "is_p2p",
+    "description": "Current channel is P2P",
+    "availability": "At request time"
+  },
+  {
+    "name": "is_qr",
+    "description": "Current channel is QR; BANK is the reference channel",
+    "availability": "At request time"
+  },
+  {
+    "name": "sender_15m_count",
+    "description": "Number of prior transactions for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_total",
+    "description": "Total prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_mean",
+    "description": "Mean prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_max",
+    "description": "Largest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_min",
+    "description": "Smallest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_std",
+    "description": "Population standard deviation of prior amounts for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_distinct_partners",
+    "description": "Unique prior counterparties for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_p2p_count",
+    "description": "Prior P2P count for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_qr_count",
+    "description": "Prior QR count for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_large_count",
+    "description": "Prior amounts above 3000 for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_15m_small_count",
+    "description": "Prior amounts below 300 for this sender in the sender role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_count",
+    "description": "Number of prior transactions for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_total",
+    "description": "Total prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_mean",
+    "description": "Mean prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_max",
+    "description": "Largest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_min",
+    "description": "Smallest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_std",
+    "description": "Population standard deviation of prior amounts for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_distinct_partners",
+    "description": "Unique prior counterparties for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_p2p_count",
+    "description": "Prior P2P count for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_qr_count",
+    "description": "Prior QR count for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_large_count",
+    "description": "Prior amounts above 3000 for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1h_small_count",
+    "description": "Prior amounts below 300 for this sender in the sender role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_count",
+    "description": "Number of prior transactions for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_total",
+    "description": "Total prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_mean",
+    "description": "Mean prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_max",
+    "description": "Largest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_min",
+    "description": "Smallest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_std",
+    "description": "Population standard deviation of prior amounts for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_distinct_partners",
+    "description": "Unique prior counterparties for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_p2p_count",
+    "description": "Prior P2P count for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_qr_count",
+    "description": "Prior QR count for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_large_count",
+    "description": "Prior amounts above 3000 for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_6h_small_count",
+    "description": "Prior amounts below 300 for this sender in the sender role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_count",
+    "description": "Number of prior transactions for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_total",
+    "description": "Total prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_mean",
+    "description": "Mean prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_max",
+    "description": "Largest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_min",
+    "description": "Smallest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_std",
+    "description": "Population standard deviation of prior amounts for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_distinct_partners",
+    "description": "Unique prior counterparties for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_p2p_count",
+    "description": "Prior P2P count for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_qr_count",
+    "description": "Prior QR count for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_large_count",
+    "description": "Prior amounts above 3000 for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_1d_small_count",
+    "description": "Prior amounts below 300 for this sender in the sender role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_count",
+    "description": "Number of prior transactions for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_total",
+    "description": "Total prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_mean",
+    "description": "Mean prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_max",
+    "description": "Largest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_min",
+    "description": "Smallest prior transaction amount for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_std",
+    "description": "Population standard deviation of prior amounts for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_distinct_partners",
+    "description": "Unique prior counterparties for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_p2p_count",
+    "description": "Prior P2P count for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_qr_count",
+    "description": "Prior QR count for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_large_count",
+    "description": "Prior amounts above 3000 for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "sender_7d_small_count",
+    "description": "Prior amounts below 300 for this sender in the sender role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_count",
+    "description": "Number of prior transactions for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_total",
+    "description": "Total prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_mean",
+    "description": "Mean prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_max",
+    "description": "Largest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_min",
+    "description": "Smallest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_std",
+    "description": "Population standard deviation of prior amounts for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_distinct_partners",
+    "description": "Unique prior counterparties for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_p2p_count",
+    "description": "Prior P2P count for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_qr_count",
+    "description": "Prior QR count for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_large_count",
+    "description": "Prior amounts above 3000 for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_15m_small_count",
+    "description": "Prior amounts below 300 for this receiver in the receiver role",
+    "availability": "[minute - 15, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_count",
+    "description": "Number of prior transactions for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_total",
+    "description": "Total prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_mean",
+    "description": "Mean prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_max",
+    "description": "Largest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_min",
+    "description": "Smallest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_std",
+    "description": "Population standard deviation of prior amounts for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_distinct_partners",
+    "description": "Unique prior counterparties for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_p2p_count",
+    "description": "Prior P2P count for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_qr_count",
+    "description": "Prior QR count for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_large_count",
+    "description": "Prior amounts above 3000 for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1h_small_count",
+    "description": "Prior amounts below 300 for this receiver in the receiver role",
+    "availability": "[minute - 60, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_count",
+    "description": "Number of prior transactions for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_total",
+    "description": "Total prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_mean",
+    "description": "Mean prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_max",
+    "description": "Largest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_min",
+    "description": "Smallest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_std",
+    "description": "Population standard deviation of prior amounts for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_distinct_partners",
+    "description": "Unique prior counterparties for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_p2p_count",
+    "description": "Prior P2P count for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_qr_count",
+    "description": "Prior QR count for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_large_count",
+    "description": "Prior amounts above 3000 for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_6h_small_count",
+    "description": "Prior amounts below 300 for this receiver in the receiver role",
+    "availability": "[minute - 360, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_count",
+    "description": "Number of prior transactions for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_total",
+    "description": "Total prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_mean",
+    "description": "Mean prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_max",
+    "description": "Largest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_min",
+    "description": "Smallest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_std",
+    "description": "Population standard deviation of prior amounts for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_distinct_partners",
+    "description": "Unique prior counterparties for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_p2p_count",
+    "description": "Prior P2P count for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_qr_count",
+    "description": "Prior QR count for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_large_count",
+    "description": "Prior amounts above 3000 for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_1d_small_count",
+    "description": "Prior amounts below 300 for this receiver in the receiver role",
+    "availability": "[minute - 1440, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_count",
+    "description": "Number of prior transactions for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_total",
+    "description": "Total prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_mean",
+    "description": "Mean prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_max",
+    "description": "Largest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_min",
+    "description": "Smallest prior transaction amount for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_std",
+    "description": "Population standard deviation of prior amounts for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_distinct_partners",
+    "description": "Unique prior counterparties for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_p2p_count",
+    "description": "Prior P2P count for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_qr_count",
+    "description": "Prior QR count for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_large_count",
+    "description": "Prior amounts above 3000 for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  },
+  {
+    "name": "receiver_7d_small_count",
+    "description": "Prior amounts below 300 for this receiver in the receiver role",
+    "availability": "[minute - 10080, minute - 1], inclusive; empty = 0"
+  }
+]

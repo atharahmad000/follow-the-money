@@ -1,0 +1,166 @@
+{
+  "dataset": {
+    "rows": 120000,
+    "fraud_rows": 881,
+    "fraud_prevalence": 0.0073416666666666665,
+    "start_minute": 0,
+    "end_minute": 64799,
+    "fraud_value": 1658753.65
+  },
+  "splits": {
+    "train": {
+      "rows": 71760,
+      "fraud_rows": 358,
+      "fraud_prevalence": 0.004988851727982163,
+      "start_minute": 0,
+      "end_minute": 38879,
+      "fraud_value": 467705.38
+    },
+    "validation": {
+      "rows": 24334,
+      "fraud_rows": 256,
+      "fraud_prevalence": 0.01052025971891181,
+      "start_minute": 38880,
+      "end_minute": 51839,
+      "fraud_value": 480389.61
+    },
+    "test": {
+      "rows": 23906,
+      "fraud_rows": 267,
+      "fraud_prevalence": 0.011168744248305865,
+      "start_minute": 51840,
+      "end_minute": 64799,
+      "fraud_value": 710658.66
+    }
+  },
+  "feature_count": 115,
+  "selection_metric": "validation average precision",
+  "pr_auc_definition": "average precision (not trapezoidal integration)",
+  "value_definition": "Fraud transaction amount among top 100; not recovered funds",
+  "models": {
+    "transaction_only_logistic": {
+      "features": 5,
+      "selected_parameters": {
+        "C": 0.1
+      },
+      "validation_pr_auc": 0.03800094455587789,
+      "validation_trials": [
+        {
+          "parameters": {
+            "C": 0.1
+          },
+          "validation_pr_auc": 0.03800094455587789
+        },
+        {
+          "parameters": {
+            "C": 1.0
+          },
+          "validation_pr_auc": 0.03799995088138862
+        }
+      ],
+      "test": {
+        "pr_auc": 0.07135731397061089,
+        "roc_auc": 0.6800741743829984,
+        "alert_count": 100,
+        "precision_at_100": 0.23,
+        "frauds_at_100": 23,
+        "fraud_value_at_100": 437069.33,
+        "total_fraud_value": 710658.66,
+        "fraud_value_recall_at_100": 0.6150200575899546
+      }
+    },
+    "transaction_only_xgboost": {
+      "features": 5,
+      "selected_parameters": {
+        "max_depth": 3
+      },
+      "validation_pr_auc": 0.024125075406016588,
+      "validation_trials": [
+        {
+          "parameters": {
+            "max_depth": 3
+          },
+          "validation_pr_auc": 0.024125075406016588
+        },
+        {
+          "parameters": {
+            "max_depth": 5
+          },
+          "validation_pr_auc": 0.020913921665115853
+        }
+      ],
+      "test": {
+        "pr_auc": 0.02781654729073122,
+        "roc_auc": 0.7363456061073452,
+        "alert_count": 100,
+        "precision_at_100": 0.04,
+        "frauds_at_100": 4,
+        "fraud_value_at_100": 52738.649999999994,
+        "total_fraud_value": 710658.66,
+        "fraud_value_recall_at_100": 0.07421094397132935
+      }
+    },
+    "network_context_logistic": {
+      "features": 115,
+      "selected_parameters": {
+        "C": 0.1
+      },
+      "validation_pr_auc": 0.8277159279293416,
+      "validation_trials": [
+        {
+          "parameters": {
+            "C": 0.1
+          },
+          "validation_pr_auc": 0.8277159279293416
+        },
+        {
+          "parameters": {
+            "C": 1.0
+          },
+          "validation_pr_auc": 0.8155643766321822
+        }
+      ],
+      "test": {
+        "pr_auc": 0.8154773422969935,
+        "roc_auc": 0.9338121649727257,
+        "alert_count": 100,
+        "precision_at_100": 0.99,
+        "frauds_at_100": 99,
+        "fraud_value_at_100": 112134.26,
+        "total_fraud_value": 710658.66,
+        "fraud_value_recall_at_100": 0.15778919798148944
+      }
+    },
+    "network_context_xgboost": {
+      "features": 115,
+      "selected_parameters": {
+        "max_depth": 3
+      },
+      "validation_pr_auc": 0.8615642441223061,
+      "validation_trials": [
+        {
+          "parameters": {
+            "max_depth": 3
+          },
+          "validation_pr_auc": 0.8615642441223061
+        },
+        {
+          "parameters": {
+            "max_depth": 5
+          },
+          "validation_pr_auc": 0.855728108671393
+        }
+      ],
+      "test": {
+        "pr_auc": 0.8428407507997586,
+        "roc_auc": 0.9663783251603036,
+        "alert_count": 100,
+        "precision_at_100": 1.0,
+        "frauds_at_100": 100,
+        "fraud_value_at_100": 130552.81999999999,
+        "total_fraud_value": 710658.66,
+        "fraud_value_recall_at_100": 0.18370678829130146
+      }
+    }
+  }
+}
