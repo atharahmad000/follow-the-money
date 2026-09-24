@@ -10,6 +10,16 @@ The README combines conceptual cover artwork with reproducible analytical figure
 | [training-activity.png](assets/training-activity.png) | Matplotlib; training-period SQL EDA | Explain the generator's activity and planted fraud |
 | [time-safety.png](assets/time-safety.png) | Matplotlib; split metadata and feature rule | Explain chronological evaluation and feature availability |
 
+## Social post cards
+
+These square cards are ready for a LinkedIn carousel or project announcement. They are conceptual artwork generated with the built-in image-generation tool; they do not add empirical evidence to the model results.
+
+| Asset | Suggested post use |
+| --- | --- |
+| [follow-the-money-post-cover.png](assets/social/follow-the-money-post-cover.png) | Opening card: project title and mobile-wallet network theme |
+| [follow-the-money-workflow-card.png](assets/social/follow-the-money-workflow-card.png) | Second card: generate/load -> DuckDB/EDA -> features -> models -> holdout |
+| [follow-the-money-results-card.png](assets/social/follow-the-money-results-card.png) | Third card: explain why historical context and value coverage create a tradeoff |
+
 The four analytical figures use navy, teal, slate, and amber. Charts retain axis scales, definitions, data scope, and simulation labels. Alternative text accompanies each image in the README.
 
 ## Regenerate analytical figures
